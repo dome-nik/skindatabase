@@ -1,0 +1,133 @@
+:root {
+  --primary: #5b46e0f5;
+  --secondary: #981717f1;
+  --dark: #de2727;
+  --light: #F3F3F3;
+}
+/*
+1)  --primary: #d43c83;
+  --secondary: #59364f;
+    background-color: rgba(249, 187, 226, 0.667);
+
+2)    --primary: #d43c3c;
+  --secondary: #593636;
+    background-color: #fb0d0d58;
+
+
+3)  --primary: #514f4ff5;
+  --secondary: #1a1818e6;
+    background-color: #0000006c;
+
+
+*/
+
+
+.grid_layout{
+    display: grid;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 100%;
+    gap: 5%;
+    grid-template-columns:repeat(4,200px);
+    justify-content: center;
+    align-content: center;
+
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__face--front h2 {
+  color: #FFF;
+  font-size: 20px;
+}
+
+.card__face--back {
+  background-color: #cab2e8d5;
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 5px 5px 10px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 30% 0px;
+}
+
+.card__header h2 {
+  color: #FFF;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding: 30px;
+}
+
+.card__body h3 {
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card__body p {
+  color: var(--dark);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}

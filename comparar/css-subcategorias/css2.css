@@ -1,0 +1,83 @@
+
+#header {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+ul, ol {
+    list-style:none;
+
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#2b2727;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+.nav li a:hover {
+    background-color:#3fc9f0;
+    font-weight: bold;
+}
+
+
+
+.nav li a.WeaponCase:hover {
+    background-color:#ff2424;
+    font-weight: bold;
+}
+.nav li a li a.WeaponCase:hover{
+    background-color:#ff2424;
+}
+
+.nav li a.ChromaCase:hover {
+    background-color:#ffc400;
+    font-weight: bold;
+}
+.nav li a li a.ChromaCase:hover{
+    background-color:#ffc400;
+}
+
+.nav li a.knives:hover {
+    background-color:#a229da;
+    font-weight: bold;
+}
+.nav li a li a.knives:hover{
+    background-color:#a229da;
+}
+
+.nav li a.Operation:hover {
+    background-color:#26ed6f;
+    font-weight: bold;
+}
+.nav li a li a.Operation:hover{
+    background-color:#26ed6f;
+}
+
+
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
